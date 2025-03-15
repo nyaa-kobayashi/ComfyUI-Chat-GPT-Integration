@@ -12,7 +12,7 @@ CONFIG_FILE = os.path.join(os.path.dirname(NODE_FILE),'config.json')
 ROLES_FILE = os.path.join(os.path.dirname(NODE_FILE),'roles.json')
 
 def save_prompt_to_file(log):
-    with open(os.path.join(os.path.dirname(os.path.realpath(__file__)),"prompt_log.txt"), "a") as f:
+    with open(os.path.join(os.path.dirname(os.path.realpath(__file__)),"prompt_log.txt"), "a", encoding="utf-8") as f:
         f.write(f"Logged {datetime.now().strftime('%Y%m%d%H%M%S')}\n")
         f.write(f"{log}\n\n\n")
 
